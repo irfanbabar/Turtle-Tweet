@@ -15,7 +15,7 @@ RSpec.describe PagesController, type: :controller do
 
     it "should have a non-blank body" do
       get'home'
-      response.body.should_not =~ /<body>\s*<\/body>/
+      expect(response.body).should_not =~ /<body>\s*<\/body>/
     end
   end
 
