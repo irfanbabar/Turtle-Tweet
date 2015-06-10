@@ -38,6 +38,7 @@ group :development, :test do
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
+  gem 'capybara'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -45,6 +46,10 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 
 
-group :development, :test do
+group :development do
   gem 'rspec-rails', '~> 3.0'
+end
+
+group :test do
+  gem 'rspec', '~> 3.0'
 end
