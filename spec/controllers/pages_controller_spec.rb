@@ -2,6 +2,11 @@ require 'rails_helper'
 
 RSpec.describe PagesController, type: :controller do
    render_views
+
+   before(:each) do
+     @base_title = "Ruby on Rails Tutorial Turtle Tweets"
+   end
+
   describe "GET #home" do
     it "returns http success" do
       get :home
@@ -10,7 +15,8 @@ RSpec.describe PagesController, type: :controller do
 
     it "should have a right title" do
       get :home
-      expect(response.body).to have_selector("title", :text=> "Ruby on Rails Tutorial Turtle Tweets | Home", :visible=>false)
+      expect(response.body).to have_selector("title", 
+                                             :text=> "#{@base_title} | Home", :visible=>false)
     end
 
     it "should have a non-blank body" do
@@ -27,7 +33,8 @@ RSpec.describe PagesController, type: :controller do
 
     it "should have a right title" do
       get :contact
-      expect(response.body).to have_selector("title", :text=> "Ruby on Rails Tutorial Turtle Tweets | Contact", :visible=>false)
+      expect(response.body).to have_selector("title", 
+                                             :text=> "#{@base_title} | Contact", :visible=>false)
     end
   end
 
@@ -39,7 +46,8 @@ RSpec.describe PagesController, type: :controller do
 
   it "should have a right title" do
       get :about
-      expect(response.body).to have_selector("title", :text=> "Ruby on Rails Tutorial Turtle Tweets | About", :visible=>false)
+      expect(response.body).to have_selector("title", 
+                                             :text=> "#{@base_title} | About", :visible=>false)
     end
  end
 end
