@@ -1,9 +1,11 @@
 <header>
- 	<%= image_tag("tweet_logo.jpg", alt: "Sample App",  :class=>"round", :size => '60x60')%>
+ 	<%= link_to image_tag("tweet_logo.jpg", alt: "Sample App",  :class=>"round", :size => '60x60'), 
+				root_path  
+ 	%>
  	<nav class="round">
  		<ul>
- 			<li><%= link_to "Home", "#" %></li>
- 			<li><%= link_to "Help", "#" %></li>
+ 			<li><%= link_to "Home", root_path %></li>
+ 			<li><%= link_to "Help", help_path %></li>
  			<li><%= link_to "Sign in", "#" %></li>
  		</ul>
  	</nav>

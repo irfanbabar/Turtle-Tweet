@@ -42,4 +42,17 @@ RSpec.describe PagesController, type: :controller do
       expect(response.body).to have_selector("title", :text=> "Ruby on Rails Tutorial Turtle Tweets | About", :visible=>false)
     end
  end
+
+ describe "GET 'help'" do
+  it "return http success" do
+    get :help
+    expect(response).to have_http_status(:success)
+  end
+
+  it "should have a right title" do
+      get :help
+      expect(response.body).to have_selector("title", 
+                                              :text=> "Ruby on Rails Tutorial Turtle Tweets | Help", :visible=>false)
+    end
+ end
 end
