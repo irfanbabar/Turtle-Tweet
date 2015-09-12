@@ -28,10 +28,5 @@ RSpec.describe "LayoutLinks", type: :request do
 		 get "/help"
 		 expect(response).to have_http_status(200)
 	   end
-
-	   it "should have Sign up page at '/sign up'" do
-		 get "/signup"
- 		 expect(response).to have_http_status(200)
-	   end
   end
 end
