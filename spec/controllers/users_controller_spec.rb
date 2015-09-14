@@ -2,6 +2,14 @@ require 'rails_helper'
 
 RSpec.describe UsersController, type: :controller do
   render_views 
+
+  describe "get show page" do
+    it "should be successfull" do
+      get :show
+      expect(response.body).should be_success
+    end
+  end
+
   describe "GET #new" do
     it "returns http success" do
       get :new
