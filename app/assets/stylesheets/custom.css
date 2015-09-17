@@ -133,3 +133,11 @@ td.sidebar {
 	border-radius:2px;
 	margin-bottom:-15px;
 }
+
+
+
+/* Controller 'user' and action 'new'*/
+
+#new_user, #new_user div {
+	padding: 5px;
+}
