@@ -141,3 +141,36 @@ td.sidebar {
 #new_user, #new_user div {
 	padding: 5px;
 }
+
+
+/* for flash hash */
+
+.success{
+	background: lightgreen;
+	border: 1px solid black;
+	padding: 5px;
+	text-align: center;
+}
+
+/*error messages*/
+
+#error_explanation{
+	border: 2px solid black;
+	background: #DD1111;
+}
+
+#error_explanation h2{
+	color: white;
+	padding: 3px;
+	padding-top: 6px;
+	padding-bottom: 0px;
+	text-align: center;
+}
+
+#error_msgs{
+	background: white;
+	border-top: 3px solid black;
+	margin-left: -5px;
+	margin-bottom: -5px;
+	width: 100%;
+}
