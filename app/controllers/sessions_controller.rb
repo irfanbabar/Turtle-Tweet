@@ -16,6 +16,8 @@ class SessionsController < ApplicationController
     	@title = "Sign In"
     	render "new"
     else
+    	sign_in user
+    	redirect_to user
     end
   end
 
